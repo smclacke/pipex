@@ -36,7 +36,7 @@ void	run_cmd(char **envp, char *argv)
 /*
 	- create pipe with write side (pipe[1]) and read side (pipe[0])
 	- fork to child, if pid == 0, inside child process
-	- fd = which each file descriptor is passed from the main
+	- fd = which ever file descriptor is passed from the main
 	- dup2() copies the fd STDIN/STDOUT
 		STDOUT is copied to pipes[1]
 		STDIN is copied to the file descritor given in main
