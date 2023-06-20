@@ -6,31 +6,19 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/31 18:06:54 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/06/20 20:55:34 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/06/20 21:43:17 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/pipex.h"
 
 /*
-	- close one pipe at a time
-		as opposed to both at once with close_pipes()
-*/
-
-void	ft_close(int var)
-{
-	if (close(var) == -1)
-		perror("pipex");
-}
-
-/*
-	- program: pipex_bonus | compile: make bonus
-	- recreating bash's behavior with multiple pipes:
+	- recreating bash's behavior:
 		bash: < infile cmd1 | cmd2 | cmd3 ... | cmdn > outfile
-		pipex_bonus: ./pipex_bonus infile cmd1 cmd2 cmd3 ... cmdn outfile
+		pipex: ./pipex infile cmd1 cmd2 cmd3 ... cmdn outfile
 	- recreating bash's behavior with here_doc:
 		bash: cmd << LIMITER | cmd1 >> outfile
-		pipex_bonus:  ./pipex_bonus here_doc LIMITER cmd cmd1 cmd2  ... cmdn outfile
+		pipex: ./pipex here_doc LIMITER cmd cmd1 cmd2  ... cmdn outfile
 	- arguments passed can be anything over 5
 	- if 2nd argument is "here_doc", open outfile (last argument)
 		infile becomes here_doc(), index set to 3 for cmd count

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   pipex_bonus.h                                      :+:    :+:            */
+/*   pipex.h                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/31 18:03:41 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/06/19 17:56:43 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/06/20 21:43:06 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 # ifndef BUFFERSIZE
 #  define BUFFERSIZE 100
 # endif
-
-void		ft_close(int var);
 
 //-------Here_doc------//
 int			here_doc(char *limiter, int argc);
@@ -50,6 +48,7 @@ void		error_cmd(char **cmd);
 void		error_here_doc(int argc);
 
 //--------Utils--------//
+void		ft_close(int var);
 void		close_pipes(int *pipes);
 int			error_access(char *path);
 void		error_path(char *cmd);

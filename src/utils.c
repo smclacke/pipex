@@ -6,11 +6,22 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/07 18:53:23 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/06/20 20:55:49 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/06/20 21:43:22 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/pipex.h"
+
+/*
+	- close one pipe at a time
+		as opposed to both at once with close_pipes()
+*/
+
+void	ft_close(int var)
+{
+	if (close(var) == -1)
+		perror("pipex");
+}
 
 /*
 	- not sure how to create a failure for close()

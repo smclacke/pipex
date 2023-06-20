@@ -1,4 +1,5 @@
-## **Pipex** 
+## **Pipex**
+
 recreates bash's behavior for:
 ```
 < infile cmd1 | cmd2 | cmd3 ... | cmdn > outfile
@@ -9,7 +10,10 @@ The program can be executed as follows:
 ```
 Arguments must consist of an infile, outfile and n number of commands. 
  
+
  ## **here_doc**
+
+
  recreates bash's behavior for:
  ```
  cmd << LIMITER | cmd1 >> file
