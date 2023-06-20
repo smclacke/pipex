@@ -13,7 +13,7 @@
 #include "../include/pipex.h"
 
 /*
-	- check is the cmd exists
+	- check if the cmd exists
 	- get the cmd path (cmd -> /cmd -> /bin/cat) and 
 		check that the cmd is executable
 	- call execve() which if successful will take over and once finished,
