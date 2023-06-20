@@ -19,5 +19,5 @@ The program can be executed as follows:
  ```
 ./pipex here_doc LIMITER cmd1 cmd2 cmd3 ... cmdn outfile
 ```
-Arguments must consist of "here_doc", the LIMITER, n number of commands and an outfile. To add flags to commands, use double quotes e.g. "wc -l".
+Arguments must consist of "here_doc", the LIMITER, n number of commands and an outfile.
 
