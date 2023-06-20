@@ -57,7 +57,7 @@ static char	**ft_get_paths(char **envp, char *cmd)
 }
 
 /*
-	- if passing an local executable (e.g. ./program)
+	- if passing a local executable (e.g. ./program)
 		don't search through the path directories, just return cmd to run_cmd()
 	- if an absolute path is passed (e.g. /bin/cat) 
 		don't search through the path directories, just return cmd to run_cmd()
