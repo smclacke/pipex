@@ -6,7 +6,7 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/31 18:06:54 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/06/20 21:43:17 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/06/20 21:44:48 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 	- recreating bash's behavior with here_doc:
 		bash: cmd << LIMITER | cmd1 >> outfile
 		pipex: ./pipex here_doc LIMITER cmd cmd1 cmd2  ... cmdn outfile
-	- arguments passed can be anything over 5
+	- arguments passed >= 5
 	- if 2nd argument is "here_doc", open outfile (last argument)
 		infile becomes here_doc(), index set to 3 for cmd count
 		(./prog, here_doc, LIMITER, cmd, ...)
