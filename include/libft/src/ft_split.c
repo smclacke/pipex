@@ -6,7 +6,7 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 16:31:47 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/05/11 23:11:23 by SarahLouise   ########   odam.nl         */
+/*   Updated: 2024/04/20 16:25:34 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,9 @@ char	**ft_split(char const *s, char c)
 	if (!arr)
 		return (0);
 	if (!(ft_letters(s, c, arr)))
+	{
+		ft_free(arr, ft_words(s, c));
 		return (NULL);
+	}
 	return (arr);
 }

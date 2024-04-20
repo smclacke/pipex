@@ -6,7 +6,7 @@
 #    By: smclacke <smclacke@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/25 19:55:34 by smclacke      #+#    #+#                  #
-#    Updated: 2023/06/20 20:53:58 by smclacke      ########   odam.nl          #
+#    Updated: 2024/04/20 16:24:27 by smclacke      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME 			= pipex
 
 INC_DIR			= -Iinclude -Iinclude/libft/src
 
-CFLAGS			= -Wall -Wextra -Werror
+CFLAGS			= -Wall -Wextra -Werror -g -fsanitize=address
 CC				= cc
 
 SRCS			= main.c		\
