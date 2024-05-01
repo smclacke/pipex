@@ -6,7 +6,7 @@
 #    By: smclacke <smclacke@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/25 19:55:34 by smclacke      #+#    #+#                  #
-#    Updated: 2024/04/20 16:24:27 by smclacke      ########   odam.nl          #
+#    Updated: 2024/05/01 12:45:28 by smclacke      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME 			= pipex
 
 INC_DIR			= -Iinclude -Iinclude/libft/src
 
-CFLAGS			= -Wall -Wextra -Werror -g -fsanitize=address
+MAKEFLAGS		= --no-print-directory
+CFLAGS			= -Wall -Wextra -Werror 
+CFLAGS			+= -g -fsanitize=address
 CC				= cc
 
 SRCS			= main.c		\
@@ -57,11 +59,11 @@ $(OBJ_DIR)/%.o:$(SRC_DIR)/%.c
 	@ $(CC) $(CFLAGS) $(INC_DIR) -c $< -o $@
 
 clean		:
-	@ make -C include/libft clean
+	@ make $(MAKEFLAGS) -C include/libft clean
 	@ rm -rf $(OBJ_DIR)
 
 fclean		:
-	@ make -C include/libft fclean
+	@ make $(MAKEFLAGS) -C include/libft fclean
 	@ rm -rf $(OBJ_DIR)
 	@ rm -f $(NAME)
 	@ echo "${RED} // pipex fCleaned!${RESET}"
@@ -69,4 +71,3 @@ fclean		:
 re			: fclean all
 
 .PHONY: all clean fclean re libft
-	
